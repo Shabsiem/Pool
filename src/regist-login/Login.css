@@ -1,0 +1,26 @@
+form{
+    border: 2px solid black;
+    margin: 5% 10%;
+    width: 25%;
+    padding: 2%;
+    display: inline-block;
+    background-color: rgb(211, 211, 211, .5);
+}
+.loginForm{
+    margin-bottom: 25%
+}
+form h2{
+    text-align: center;
+}
+
+input{
+    margin: 4px 0;
+    width: 97%;
+}
+.checkbox{
+    width: auto;
+
+}
+button{
+    background-color: white;
+}

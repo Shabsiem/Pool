@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.frame{
+    padding-top: 8px;
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+}
+
+.nav{
+    background-color: black;
+    text-align: center;
+    height: 40px;
+    margin-top: 10px;
+    line-height: 40px;
+}
+
+.nav a{
+    color: white;
+    padding: 0 8px;
+    text-decoration: none;
+}
+
+

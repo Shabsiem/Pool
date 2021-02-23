@@ -1,0 +1,20 @@
+body{
+    font-family: sans-serif
+}
+.main{
+    width: 50%;
+    margin: 0 auto;
+    background-color: lightgray;
+    opacity: .75;
+
+}
+.center, h2{
+    text-align: center;
+}
+li{
+    text-align: justify;
+    opacity: 1
+}
+div{
+    padding: 8px
+}
