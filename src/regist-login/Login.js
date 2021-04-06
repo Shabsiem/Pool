@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import store from '../store/store'
-import '../regist-login/Login.css'
+import './Login.css'
 import emailjs from 'emailjs-com'
 import {Link} from 'react-router-dom';
 

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Header from '../frame/header'
 import './terms.css'
 class Terms extends Component {
     render() { 
         return ( 
             <div>
-                <Header onClick={this.props.relogin}/>
                 <div className="main">
                     <h2>Swimming Pool WAIVER</h2>
                     <p className="center"><strong>WAIVER AND REALEASE OF LIABILITY FORM<br/>

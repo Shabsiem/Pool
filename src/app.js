@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom'
-import {Route} from 'react-router-dom'
-// import Intro from './intro/intro'
+import {Route, BrowserRouter as Router} from 'react-router-dom'
 import Login from './regist-login/Login'
 import CalendarPage from './calendar/CalendarPage'
 import Terms from './terms/terms'
@@ -40,12 +38,11 @@ class App extends Component {
         return (
             <div className = "frame">
                 <Router>
-                    <Route path = "/" exact strict render={
+                <Header/>
+                    <Route path = "/" exact strict render = {
                         ()=>{
                             return(
                                 <div>
-                                    <Header
-                                    />
                                     {this.handleMain()}
                                 </div>
                             )
@@ -53,7 +50,6 @@ class App extends Component {
                     }/>
                     <Route path = "/ContactUs" component={ContactUs}/>
                     <Route path = "/Terms" component={Terms}/>
-                    {/* <Route path = "/Intro" component={Intro}/> */}
                     <Route path = "/CalendarPage" component={CalendarPage}/>
                 </Router>
             </div>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../frame/header';
 
 class ContactUs extends Component {
     state = {
@@ -32,7 +31,6 @@ class ContactUs extends Component {
     render() { 
         return (  
             <div>
-                <Header onClick={this.props.relogin}/>
                 <form onSubmit={this.handleSubmit}>
                     <label>Please leave a message regarding what the nature of the issue is:</label>
                     <select placeholder= "Choose one">
