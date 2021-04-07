@@ -39,7 +39,10 @@ class App extends Component {
             <div className = "frame">
                 <Router>
                 <Header/>
-                    <Route path = "/" exact strict render = {
+                    <Route path = "/ContactUs" component={ContactUs}/>
+                    <Route path = "/Terms" component={Terms}/>
+                    <Route path = "/CalendarPage" component={CalendarPage}/>
+                    <Route path = "/" exact render = {
                         ()=>{
                             return(
                                 <div>
@@ -48,9 +51,6 @@ class App extends Component {
                             )
                         }
                     }/>
-                    <Route path = "/ContactUs" component={ContactUs}/>
-                    <Route path = "/Terms" component={Terms}/>
-                    <Route path = "/CalendarPage" component={CalendarPage}/>
                 </Router>
             </div>
          );

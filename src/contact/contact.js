@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './contact.css'
 class ContactUs extends Component {
     state = {
         issue: "",
@@ -30,8 +30,8 @@ class ContactUs extends Component {
 
     render() { 
         return (  
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className='contactForm'>
+                <form onSubmit={this.handleSubmit} className='contactForm'>
                     <label>Please leave a message regarding what the nature of the issue is:</label>
                     <select placeholder= "Choose one">
                         <option onChange={this.handleChange} name= "issue">Technical issues (website/login/website useage</option>
@@ -42,7 +42,13 @@ class ContactUs extends Component {
                     <label>Phone Number:</label>
                     <input type="number" onChange={this.handleChange} value = {this.state.phone} name= "phone"></input>
                     <label>Message:</label>
-                    <input type="textarea" placeholder="Your massage here" onChange={this.handleChange} value = {this.state.message} name="message"></input>
+                    <textarea 
+                        placeholder="Your massage here" 
+                        onChange={this.handleChange} 
+                        value={this.state.message} name="message" 
+                        rows='5'
+                        className='contactMessage'>
+                    </textarea>
                     <button>Submit</button>
                 </form>
             </div>
