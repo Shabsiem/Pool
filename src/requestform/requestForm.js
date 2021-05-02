@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com'
 import './requestForm.css'
+import BaseButton from '../base/BaseButton';
 
 class RequestForm extends React.Component {
     state = {  
@@ -72,7 +73,7 @@ class RequestForm extends React.Component {
               value={this.state.numguests} onChange={this.handleChange}></input><br/>
           </label>
           <button> Clear</button>
-          <button type="submit">Send Request</button>
+          <BaseButton type='submit' text='Send Request'></BaseButton>
           <ul>
           </ul>
         </form>

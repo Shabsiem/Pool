@@ -1,5 +1,5 @@
 {
-  "homepage": "https://shabsiem.github.io/Pool/",
+  "homepage": "https://shabsiem.github.io/Pool",
   "name": "ool",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,7 @@
     "debug": "^4.2.0",
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
+    "firebase": "^8.3.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",

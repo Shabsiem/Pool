@@ -8,7 +8,7 @@ class CalendarPage extends React.Component {
     return(
     <div style={{display: "flex", margin: "0, auto, 10%"}}>
       <iframe title = "Swimming Schedule"
-        src="https://calendar.google.com/calendar/b/3/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FJerusalem&amp;src=bW9za292aXR6cG9vbEBnbWFpbC5jb20&amp;color=%23039BE5" 
+        src="https://calendar.google.com/calendar/b/3/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=bW9za292aXR6cG9vbEBnbWFpbC5jb20&amp;color=%23039BE5" 
         style={{height: "700px", width: "700px", margin: "2%"}}>
       </iframe>
       <RequestForm/>

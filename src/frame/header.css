@@ -23,5 +23,8 @@ body{
     padding: 0 8px;
     text-decoration: none;
 }
+.nav .logout{
+    display: none
+}
 
 

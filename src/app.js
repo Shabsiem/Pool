@@ -1,29 +1,36 @@
 import React, {Component} from 'react';
-import {Route, BrowserRouter as Router} from 'react-router-dom'
+import {Route, Redirect, BrowserRouter as Router} from 'react-router-dom'
 import Login from './regist-login/Login'
 import CalendarPage from './calendar/CalendarPage'
 import Terms from './terms/terms'
 import ContactUs from './contact/contact'
 import Header from './frame/header'
-
 class App extends Component {
     state = {
-        loggedin: false,
+        loggedin: null,
     }
     constructor(props){
         super(props)
         this.changeMain = this.changeMain.bind(this)
+        this.logout = this.logout.bind(this)
     }
 
-    changeMain(){
-        this.setState({loggedin: true})
+    changeMain(props){
+        this.setState({loggedin: props.token})
     }
-
+    logout(props){ 
+        this.setState({loggedin: props.logout})
+    }
     handleMain(){
-        if (this.state.loggedin === false){
+        const expire = localStorage.getItem('tokenExpiration')
+        const now = new Date().getTime()
+        if (now > expire && this.state.loggedin !== null){
+            this.setState({loggedin: null})
+        }
+        if (this.state.loggedin === null){
             return(
                 <Login 
-                    enter={this.changeMain.bind(this)}
+                    auth= {this.changeMain}
                 />
             )
         }
@@ -33,15 +40,20 @@ class App extends Component {
             )
         }
     }
-
     render(){
         return (
             <div className = "frame">
                 <Router>
-                <Header/>
+                <Header
+                    loginstate = {this.state.loggedin}
+                    logout = {this.logout}
+                />
                     <Route path = "/ContactUs" component={ContactUs}/>
                     <Route path = "/Terms" component={Terms}/>
                     <Route path = "/CalendarPage" component={CalendarPage}/>
+                    <Route path = "/Pool">
+                        <Redirect to= '/'/>
+                    </Route>
                     <Route path = "/" exact render = {
                         ()=>{
                             return(
@@ -51,6 +63,7 @@ class App extends Component {
                             )
                         }
                     }/>
+
                 </Router>
             </div>
          );
